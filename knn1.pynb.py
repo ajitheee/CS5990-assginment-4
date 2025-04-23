@@ -4,7 +4,8 @@
 # SPECIFICATION: description of the program
 # FOR: CS 5990- Assignment #4
 # TIME SPENT: 1 day
-#-----------------------------------------------------------*/import pandas as pd
+#-----------------------------------------------------------
+import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -12,11 +13,12 @@ from sklearn.neighbors import KNeighborsClassifier
 classes = [i for i in range(-22, 39, 6)]
 
 # Defining the hyperparameter values of KNN
-k_values = [ 15]  # Example: Trying specific k values
-p_values = [ 1]    # Example: Including p=3
+k_values = [ 5]  # Example: Trying specific k values
+p_values = [ 2]    # Example: Including p=3
 w_values = ['uniform', 'distance']
 
 # Reading the training data
+# If the file is in a different directory, replace 'path/to/your/file/' with the actual path
 train_data = pd.read_csv('weather_test.csv')  
 test_data = pd.read_csv('weather_test.csv')
 
